@@ -21,18 +21,21 @@ public class MainFormDiagnosa extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_form_diagnosa);
-        findAllViewsId();
-        bt2.setOnClickListener(this);
+        //findAllViewsId();
+//        bt2.setOnClickListener(this);
     }
 
-    private void findAllViewsId() {
-        bt2 = (Button) findViewById(R.id.bt_lihathasil);
-        nama = (EditText) findViewById(R.id.input_nama);
-        umur = (EditText) findViewById(R.id.input_umur);
-        berat_badan = (EditText) findViewById(R.id.input_bb);
-        genderRadio = (RadioGroup) findViewById(R.id.input_jeniskelamin);
-        penyakitRadio = (RadioGroup) findViewById(R.id.input_penyakit);
-    }
+    /**
+     * gak tau ini buat apa??
+     */
+//    private void findAllViewsId() {
+//        bt2 = (Button) findViewById(R.id.bt_lihathasil);
+//        nama = (EditText) findViewById(R.id.input_nama);
+//        umur = (EditText) findViewById(R.id.input_umur);
+//        berat_badan = (EditText) findViewById(R.id.input_bb);
+//        genderRadio = (RadioGroup) findViewById(R.id.input_jeniskelamin);
+//        penyakitRadio = (RadioGroup) findViewById(R.id.input_penyakit);
+//    }
 
 
     @Override
