@@ -8,8 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import java.text.NumberFormat;
 
-public class MainFormDiagnosa extends AppCompatActivity implements View.OnClickListener {
+public class MainFormDiagnosa extends AppCompatActivity implements View.OnClickListener{
 
     //mendeklarasikan variabel
     Button bt2;
@@ -22,21 +23,8 @@ public class MainFormDiagnosa extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_form_diagnosa);
         //findAllViewsId();
-//        bt2.setOnClickListener(this);
+        //bt2.setOnClickListener(this);
     }
-
-    /**
-     * gak tau ini buat apa??
-     */
-//    private void findAllViewsId() {
-//        bt2 = (Button) findViewById(R.id.bt_lihathasil);
-//        nama = (EditText) findViewById(R.id.input_nama);
-//        umur = (EditText) findViewById(R.id.input_umur);
-//        berat_badan = (EditText) findViewById(R.id.input_bb);
-//        genderRadio = (RadioGroup) findViewById(R.id.input_jeniskelamin);
-//        penyakitRadio = (RadioGroup) findViewById(R.id.input_penyakit);
-//    }
-
 
     @Override
     public void onClick(View v) {
@@ -53,6 +41,22 @@ public class MainFormDiagnosa extends AppCompatActivity implements View.OnClickL
         intent.putExtras(b);
         //memulai activity kedua
         startActivity(intent);
-
     }
+
+    private void findAllViewsId() {
+        bt2 = (Button) findViewById(R.id.bt_lihat_hasil);
+        nama = (EditText) findViewById(R.id.input_nama);
+        umur = (EditText) findViewById(R.id.input_umur);
+        berat_badan = (EditText) findViewById(R.id.input_bb);
+        genderRadio = (RadioGroup) findViewById(R.id.input_jeniskelamin);
+        penyakitRadio = (RadioGroup) findViewById(R.id.input_penyakit);
+    }
+
+
+    public void lihatHasil(View v) {
+        findAllViewsId();
+        bt2.setOnClickListener(this);
+    }
+
+
 }
